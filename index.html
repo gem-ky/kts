@@ -366,8 +366,7 @@
           <img src="https://i.imgur.com/DkFKvmg.jpeg" alt="Портретный рендер в стиле реализма">
         </div>
         <span class="stamp">No.<br>01</span>
-        <h3 class="cap">«Золотой час»</h3>
-        <p class="desc">- Огненное море травы полыхает под лучами заходящего солнца. - itzKatus_</p>
+        <p class="desc">Blender · Cycles</p>
         <span class="tag">Реализм</span>
       </article>
 
@@ -380,8 +379,7 @@
           <img src="https://i.imgur.com/cavCPTM.png" alt="Абстрактная 3D-композиция">
         </div>
         <span class="stamp">No.<br>02</span>
-        <h3 class="cap">«Страж луны»</h3>
-        <p class="desc">- Одинокая цитадель под бледным щитом луны, застывшая среди каменистых пустошей - вечный страж ночи, укрытый туманом и безмолвием. - itzKatus_</p>
+        <p class="desc">Blender · Cycles</p>
         <span class="tag">Сюрреализм</span>
       </article>
 
@@ -394,8 +392,7 @@
           <img src="https://i.imgur.com/tM8FIJe.jpeg/640x480/cdbf9c/2b2118?text=Персонаж" alt="Дизайн 3D-персонажа">
         </div>
         <span class="stamp">No.<br>03</span>
-        <h3 class="cap">«Архитектура небытия»</h3>
-        <p class="desc">- Сплетение тонких нитей в абсолютной темноте, рождающее хрупкую геометрию хаоса. - itzKatus_</p>
+        <p class="desc">Blender · Cycles</p>
         <span class="tag">абстракция</span>
       </article>
 
@@ -408,8 +405,7 @@
           <img src="https://i.imgur.com/mKN487Z.jpeg/640x480/e8dcc1/2b2118?text=Мультяшный+герой" alt="Мультяшный 3D-персонаж">
         </div>
         <span class="stamp">No.<br>04</span>
-        <h3 class="cap">«Неоновый апокалипсис»</h3>
-        <p class="desc">- Яркий хаос уличного арта и кирпичных стен, проступающий сквозь токсичную неоновую темноту. - itzKatus_</p>
+        <p class="desc">Blender · Cycles</p>
         <span class="tag">Киберпанк</span>
       </article>
 
@@ -422,8 +418,7 @@
           <img src="https://i.imgur.com/hFI0ofE.jpeg/640x480/dfd0ad/2b2118?text=Абстрактный+реализм" alt="Работа в стиле абстрактного реализма">
         </div>
         <span class="stamp">No.<br>05</span>
-        <h3 class="cap">«Отражение»</h3>
-        <p class="desc">- Жидкий металл застыл на кирпичной стене, отражая блики мегаполиса. - itzKatus_</p>
+        <p class="desc">Blender · Cycles</p>
         <span class="tag">Абстрактный реализм</span>
       </article>
 
@@ -436,8 +431,7 @@
           <img src="https://i.imgur.com/22OXla2.jpeg/640x480/d2c2a1/2b2118?text=Портрет+%232" alt="Второй портретный рендер">
         </div>
         <span class="stamp">No.<br>06</span>
-        <h3 class="cap">«Петля невозврата»</h3>
-        <p class="desc">- Будущее и прошлое столкнулись в одной точке, превратившись в искажённую реальность, где само время соткано из ошибок человечества. - itzKatus_</p>
+        <p class="desc">Blender · Cycles</p>
         <span class="tag">Абстракция</span>
       </article>
 
@@ -450,8 +444,7 @@
           <img src="https://i.imgur.com/vSFroUl.jpeg" alt="Мультяшное животное в 3D">
         </div>
         <span class="stamp">No.<br>07</span>
-        <h3 class="cap">«Уютный уголок (Оригинальное изображение не мое)»</h3>
-        <p class="desc">- Стилизованный мультяшный лес с розовыми цветами и плавными зелеными холмами, похожий на бумажную аппликацию - itzKatus_</p>
+        <p class="desc">Blender · Eevee</p>
         <span class="tag">Мультяшки</span>
       </article>
 
@@ -464,8 +457,7 @@
           <img src="https://placehold.co/640x480/c2b69c/2b2118?text=Без+лица" alt="Скульптурный персонаж в стиле абстрактного реализма">
         </div>
         <span class="stamp">No.<br>08</span>
-        <h3 class="cap">«Скоро»</h3>
-        <p class="desc">- Скоро</p>
+        <p class="desc">В работе</p>
         <span class="tag">Абстрактный реализм</span>
       </article>
 
@@ -561,7 +553,9 @@
     // Главное фото
     lbMainImg.src = variants[activeVariant].src;
     lbMainImg.alt = activeCard.querySelector('.frame img').alt;
-    lbTitle.textContent = activeCard.querySelector('.cap').textContent;
+    const capEl = activeCard.querySelector('.cap');
+    lbTitle.textContent = capEl ? capEl.textContent : '';
+    lbTitle.style.display = capEl ? '' : 'none';
     lbDesc.textContent  = activeCard.querySelector('.desc').textContent;
     lbTag.textContent   = activeCard.querySelector('.tag').textContent;
 
